@@ -42,7 +42,9 @@ export function useWebSocket() {
 
     try {
       // 1. Create SockJS connection
-      const socket = new SockJS('http://localhost:8080/ws');
+      const wsUrl = import.meta.env.VITE_WS_URL || 'http://localhost:8080/ws';
+      console.log('Using WebSocket URL:', wsUrl);
+      const socket = new SockJS(wsUrl);
       stompClient = over(socket);
 
       // Optional: Disable STOMP debug logging in production
