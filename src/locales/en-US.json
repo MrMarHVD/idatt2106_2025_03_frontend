@@ -1077,6 +1077,9 @@
     "save": "Save",
     "edit": "Edit",
     "remove-from-group": "Remove from group",
+    "no-groups": "No groups found",
+    "share-with-group": "Share with group",
+    "select-group": "Select a group",
     "search": {
       "placeholder": "Search...",
       "clear": "Clear search"

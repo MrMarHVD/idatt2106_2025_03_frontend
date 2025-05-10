@@ -1091,6 +1091,9 @@
     "save": "Lagre",
     "edit": "Rediger",
     "remove-from-group": "Fjern fra gruppe",
+    "no-groups": "Ingen grupper funnet",
+    "select-group": "Velg en gruppe",
+    "share-with-group": "Del med gruppe",
     "search": {
       "placeholder": "Søk...",
       "clear": "Tøm søk"
