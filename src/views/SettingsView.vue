@@ -206,7 +206,7 @@ const handleUpdatePassword = form.handleSubmit(async (values) => {
     const token = await new Promise<string>((resolve, reject) => {
       grecaptcha.ready(() => {
         grecaptcha
-          .execute('6Lee4CorAAAAABwb4TokgKDs9GdFCxpaiZTKfkfQ', { action: 'LOGIN' })
+          .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, { action: 'LOGIN' })
           .then((token) => (token ? resolve(token) : reject('Token generation failed')))
           .catch(reject)
       })

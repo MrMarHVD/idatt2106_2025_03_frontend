@@ -67,7 +67,7 @@ async function handleLogin() {
     const recaptchaToken = await new Promise<string>((resolve, reject) => {
       grecaptcha.ready(() => {
         grecaptcha
-          .execute('6Lee4CorAAAAABwb4TokgKDs9GdFCxpaiZTKfkfQ', {
+          .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, {
             action: 'LOGIN',
           })
           .then((token: string) => {
