@@ -5,7 +5,7 @@ import type { NotificationMessage } from '@/models/NotificationMessage';
 // Ensure global is defined for SockJS
 declare global {
   interface Window {
-    global: any;
+    global: Window;
   }
 }
 
@@ -79,7 +79,8 @@ export function connectNotificationSocket(userId: string | number, onNotificatio
 
   try {
     console.log('Creating new SockJS connection...');
-    const socket = new SockJS('http://localhost:8080/ws');
+    const wsUrl = import.meta.env.VITE_WS_URL || 'http://localhost:8080/ws';
+    const socket = new SockJS(wsUrl);
     stompClient = over(socket);
 
     // Enable debug logging for troubleshooting
