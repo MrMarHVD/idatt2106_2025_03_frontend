@@ -3,11 +3,64 @@ import { Client, over, Frame } from 'stompjs';
 import type { NotificationMessage } from '@/models/NotificationMessage';
 
 // Ensure global is defined for SockJS
-if (typeof window !== 'undefined') {
-  (window as Window & typeof globalThis).global = window;
+declare global {
+  interface Window {
+    global: any;
+  }
 }
 
+window.global = window;
+
 let stompClient: Client | null = null;
+
+export const connectWebSocket = () => {
+  if (stompClient?.connected) {
+    console.log('WebSocket already connected');
+    return;
+  }
+
+  console.log('Creating new SockJS connection...');
+  const wsUrl = import.meta.env.VITE_WS_URL || 'http://localhost:8080/ws';
+  const socket = new SockJS(wsUrl);
+  stompClient = over(socket);
+
+  stompClient.debug = (str) => {
+    console.log('STOMP Debug:', str);
+  };
+
+  stompClient.connect(
+    {},
+    () => {
+      console.log('Connected to WebSocket');
+      if (!stompClient) {
+        console.error('Stomp client is null after connection');
+        return;
+      }
+
+      stompClient.subscribe(
+        '/topic/notifications',
+        (message) => {
+          console.log('Received notification:', message.body);
+          // Handle notification
+        }
+      );
+    },
+    (error) => {
+      console.error('WebSocket connection error:', error);
+    }
+  );
+};
+
+export const disconnectWebSocket = () => {
+  if (stompClient) {
+    if (stompClient.connected) {
+      stompClient.disconnect(() => {
+        console.log('Disconnected from WebSocket');
+      });
+    }
+    stompClient = null;
+  }
+};
 
 export function connectNotificationSocket(userId: string | number, onNotification: (msg: NotificationMessage) => void) {
   if (!userId) {

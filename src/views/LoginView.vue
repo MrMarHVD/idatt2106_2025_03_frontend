@@ -71,6 +71,7 @@ async function handleLogin() {
             action: 'login',
           })
           .then((token: string) => {
+            console.log('Generated reCAPTCHA token:', token)
             if (!token) {
               reject(new Error('Failed to generate reCAPTCHA token'))
             } else {
