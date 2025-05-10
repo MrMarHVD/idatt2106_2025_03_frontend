@@ -68,7 +68,7 @@ async function handleLogin() {
       grecaptcha.ready(() => {
         grecaptcha
           .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, {
-            action: 'LOGIN',
+            action: 'login',
           })
           .then((token: string) => {
             if (!token) {
