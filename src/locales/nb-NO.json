@@ -379,6 +379,11 @@
       "before": "Lær hvordan du forbereder deg før en krise oppstår",
       "during": "Få kritisk informasjon under aktive nødsituasjoner",
       "after": "Finn ressurser for gjenoppretting etter at en krise har passert"
+    },
+    "no_household": {
+      "title": "Ingen husstand funnet",
+      "banner": "Uten en husstand kan vi ikke oppdatere deg om aktive hendelser i nærheten.",
+      "create_now": "Opprett husstand"
     }
   },
   "news": {

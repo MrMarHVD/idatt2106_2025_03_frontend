@@ -326,47 +326,52 @@
   },
   "home": {
     "hero": {
-      "title": "Be prepared for any crisis",
+      "title": "Be Prepared for Any Crisis",
       "description": "Krisefikser helps you and your household stay informed, prepared, and safe during emergencies."
     },
-    "view-crisis-events": "View crisis events",
-    "view_map": "View crisis map",
-    "view_all_news": "View all news",
-    "household-title": "Your household",
+    "view-crisis-events": "View Crisis Events",
+    "view_map": "View Crisis Map",
+    "view_all_news": "View All News",
+    "household-title": "Your Household",
     "household-feature1": "Create and manage your own household",
     "household-feature2": "Invite family members",
     "household-feature3": "Create groups based on your household",
-    "learn_more": "Learn more",
+    "learn_more": "Learn More",
     "national_crisis": {
-      "title": "Crisis events in Norway",
-      "description": "View all active crisis events in Norway",
-      "view_all": "View all crisis events"
+      "title": "Crisis Events in Norway",
+      "description": "See all active crisis events in Norway",
+      "view_all": "See All Crisis Events"
     },
     "no_crisis": {
       "banner": "No ongoing crisis at the moment. Stay prepared!"
     },
     "crisis_theme": {
       "read_more_specific": "Read more about {crisisType} here",
-      "title": "Ongoing crisis scenario",
+      "title": "Current Crisis Scenario",
       "description": "Read about this scenario and what you can do to stay safe",
       "learn_more": "Learn more about this crisis"
     },
     "household": {
-      "title": "Create your household",
-      "description": "Set up your household to better manage resources and stay in touch with family members during emergencies.",
+      "title": "Create Your Household",
+      "description": "Set up your household to better manage resources and stay connected with family members during emergencies.",
       "feature1": "Track emergency supplies and get reminders when items expire",
       "feature2": "Share important information with household members",
       "feature3": "Receive location-specific alerts and guidance",
-      "create_button": "Create household",
-      "supplies": "Household supplies",
+      "create_button": "Create Household",
+      "supplies": "Household Supplies",
       "users": "Members"
     },
     "crisis_info": {
       "title": "Crisis Information Center",
-      "description": "Get useful information and guidance on all types of emergencies.",
+      "description": "Get useful information and guidance about all types of emergencies.",
       "before": "Learn how to prepare before a crisis occurs",
       "during": "Get critical information during active emergencies",
       "after": "Find resources for recovery after a crisis has passed"
+    },
+    "no_household": {
+      "title": "No Household Found",
+      "banner": "Without a household, we won't be able to update you on active events nearby.",
+      "create_now": "Create Household"
     }
   },
   "news": {
